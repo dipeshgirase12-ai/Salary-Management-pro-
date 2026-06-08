@@ -99,50 +99,6 @@
 
 ---
 
-## 🎬 Animated Demo
-
-<details>
-<summary><b>📺 Click to View Demo GIFs</b></summary>
-
-### Dashboard
-![Dashboard Demo](./assets/dashboard-demo.gif)
-
-### Worker Management
-![Worker Management](./assets/workers-demo.gif)
-
-### Salary Management
-![Salary Management](./assets/salary-demo.gif)
-
-### Attendance
-![Attendance](./assets/attendance-demo.gif)
-
-### PDF Export
-![PDF Export](./assets/pdf-export-demo.gif)
-
-### Excel Export
-![Excel Export](./assets/excel-export-demo.gif)
-
-</details>
-
----
-
-## 📸 Screenshots
-
-<details>
-<summary><b>🖼️ View Screenshots</b></summary>
-
-| Dashboard | Workers | Salary |
-|:---------:|:-------:|:------:|
-| ![Dashboard](https://via.placeholder.com/400x300/38B2AC/FFFFFF?text=Dashboard) | ![Workers](https://via.placeholder.com/400x300/646CFF/FFFFFF?text=Workers) | ![Salary](https://via.placeholder.com/400x300/10B981/FFFFFF?text=Salary) |
-
-| Attendance | Reports |
-|:----------:|:-------:|
-| ![Attendance](https://via.placeholder.com/400x300/F59E0B/FFFFFF?text=Attendance) | ![Reports](https://via.placeholder.com/400x300/EF4444/FFFFFF?text=Reports) |
-
-</details>
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
