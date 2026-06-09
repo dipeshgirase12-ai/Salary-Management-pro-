@@ -3,15 +3,19 @@ const USER_ID_KEY = 'salary_manager_user_id';
 const USER_NAME_KEY = 'salary_manager_user_name';
 const GUEST_MODE_KEY = 'salary_manager_guest_mode';
 
-// JWT-based auth (server issues JWT). Frontend stores ONLY token.
+// Local credential check — no backend server needed
+// Change these to set your own admin credentials
+const ADMIN_USER = 'admin';
+const ADMIN_PASS = 'admin123';
+
 export const login = async ({ username, password }) => {
-  const { adminLoginApi } = await import('./authApi.js');
-  const res = await adminLoginApi({ username, password });
+  // Simple client-side credential check
+  if (username !== ADMIN_USER || password !== ADMIN_PASS) {
+    return false;
+  }
 
-  if (!res.ok) return false;
-
-  localStorage.setItem(AUTH_KEY, res.token);
-  localStorage.setItem(USER_ID_KEY, res.userId || username);
+  localStorage.setItem(AUTH_KEY, 'local-auth-token');
+  localStorage.setItem(USER_ID_KEY, username);
   localStorage.setItem(USER_NAME_KEY, username);
   localStorage.removeItem(GUEST_MODE_KEY);
   return true;
