@@ -1,5 +1,7 @@
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import BottomNav from './components/BottomNav';
+import FloatingActionButton from './components/FloatingActionButton';
 import Dashboard from './pages/Dashboard';
 import Workers from './pages/Workers';
 import Salaries from './pages/Salaries';
@@ -48,6 +50,12 @@ function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        {(isLoggedIn() || isGuestMode()) && (
+          <>
+            <BottomNav />
+            <FloatingActionButton />
+          </>
+        )}
       </div>
     </Router>
   );

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(ADMIN_PASSWORD_PLAIN=test123 node src/server.js)",
+      "Bash(npm install)",
+      "Bash(timeout 5 node src/server.js)"
+    ]
+  }
+}

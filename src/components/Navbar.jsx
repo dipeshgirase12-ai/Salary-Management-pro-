@@ -21,16 +21,17 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between min-h-16 py-3 gap-4">
-          <NavLink to="/" className="flex flex-col items-start gap-0 text-xl font-bold text-blue-700">
-            <div className="flex items-center gap-2">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4">
+        <div className="flex items-center justify-between min-h-14 sm:min-h-16 py-2 sm:py-3 gap-2 sm:gap-4">
+          <NavLink to="/" className="flex flex-col items-start gap-0 text-lg sm:text-xl font-bold text-blue-700">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Salary Manager Pro
+              <span className="hidden sm:inline">Salary Manager Pro</span>
+              <span className="sm:hidden">SMP</span>
             </div>
-            <span className="text-[10px] font-normal text-blue-500 -mt-1">Dipesh Developer</span>
+            <span className="text-[9px] sm:text-[10px] font-normal text-blue-500 -mt-0.5 sm:-mt-1">Dipesh Developer</span>
           </NavLink>
 
           {/* Mobile menu button */}
@@ -76,23 +77,25 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile navigation */}
+        {/* Mobile navigation - Full width drawer */}
         {mobileMenuOpen && (
-          <div className="sm:hidden border-t border-gray-100 py-2 pb-3">
+          <div className="sm:hidden border-t border-gray-100 py-3 pb-4 space-y-1">
             {guestMode && (
-              <span className="inline-block mx-4 mb-2 px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">
+              <span className="inline-block mx-2 mb-2 px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">
                 DEMO MODE
               </span>
             )}
-            <NavLink to="/" className={linkClass} end onClick={() => setMobileMenuOpen(false)}>
-              Dashboard
-            </NavLink>
-            <NavLink to="/workers" className={linkClass} onClick={() => setMobileMenuOpen(false)}>
-              Workers
-            </NavLink>
-            <NavLink to="/salaries" className={linkClass} onClick={() => setMobileMenuOpen(false)}>
-              Salaries
-            </NavLink>
+            <div className="space-y-1 px-2">
+              <NavLink to="/" className={linkClass} end onClick={() => setMobileMenuOpen(false)}>
+                Dashboard
+              </NavLink>
+              <NavLink to="/workers" className={linkClass} onClick={() => setMobileMenuOpen(false)}>
+                Workers
+              </NavLink>
+              <NavLink to="/salaries" className={linkClass} onClick={() => setMobileMenuOpen(false)}>
+                Salaries
+              </NavLink>
+            </div>
             <button
               type="button"
               onClick={handleLogout}

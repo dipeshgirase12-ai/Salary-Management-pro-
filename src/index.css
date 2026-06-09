@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+/* Mobile Responsiveness Fixes */
+@supports (overflow: clip) {
+  * {
+    overflow-anchor: auto;
+  }
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Safe area padding for notches */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 640px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve scroll behavior on mobile */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Modal backdrop scroll lock */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}

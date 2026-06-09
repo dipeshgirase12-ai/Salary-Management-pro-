@@ -1,0 +1,1 @@
+Use edit_file on package.json to change scripts.dev from "vite" to "node ./node_modules/vite/bin/vite.js" to bypass PowerShell .ps1 execution policy.

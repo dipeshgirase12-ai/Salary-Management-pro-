@@ -87,7 +87,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-8 pb-24 sm:pb-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
         <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
         {stats.totalWorkers === 0 && !guestMode && (
@@ -153,21 +153,21 @@ const Dashboard = () => {
             <button onClick={() => navigate('/workers')} className="flex items-center justify-center gap-1 sm:gap-2 bg-blue-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-xs sm:text-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" /></svg>
               <span className="hidden sm:inline">Add Worker</span>
-              <span className="sm:hidden">Worker</span>
+              <span className="sm:hidden">Add</span>
             </button>
             <button onClick={() => navigate('/salaries')} className="flex items-center justify-center gap-1 sm:gap-2 bg-green-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg hover:bg-green-700 transition-colors font-medium text-xs sm:text-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
               <span className="hidden sm:inline">Add Salary</span>
-              <span className="sm:hidden">Salary</span>
+              <span className="sm:hidden">Add</span>
             </button>
             <button onClick={() => navigate('/salaries')} className="flex items-center justify-center gap-1 sm:gap-2 bg-purple-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-xs sm:text-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-              <span className="hidden sm:inline">Export Excel</span>
-              <span className="sm:hidden">Excel</span>
+              <span className="hidden sm:inline">Export</span>
+              <span className="sm:hidden">Export</span>
             </button>
             <button onClick={() => navigate('/workers')} className="flex items-center justify-center gap-1 sm:gap-2 bg-red-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg hover:bg-red-700 transition-colors font-medium text-xs sm:text-sm">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-              <span className="hidden sm:inline">Delete All</span>
+              <span className="hidden sm:inline">Delete</span>
               <span className="sm:hidden">Delete</span>
             </button>
           </div>
